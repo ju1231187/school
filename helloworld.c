@@ -2,14 +2,14 @@
 #include<stdio.h>
 int main() {
 	int days, years, weeks;
-	printf("ÃÑ ÀÏ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À:");
+	printf("ì´ ì¼ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤:");
 	scanf("%d", &days);
 	years = (days / 365);
 	weeks = (days % 365) / 7;
 	days = days - ((years * 365) + (weeks * 7));
-	printf("%d³â", years);
-	printf("%dÁÖ", weeks);
-	printf("%dÀÏ", days);
+	printf("%dë…„", years);
+	printf("%dì£¼", weeks);
+	printf("%dì¼ì…ë‹ˆë‹¤.", days);
 
 	return 0;
 }
