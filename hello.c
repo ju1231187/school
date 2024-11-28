@@ -4,17 +4,17 @@ int main() {
 	int a, b, i, j, result[10][10];
 	int c[10][10];
 	int c2[10][10];
-	printf("Çà °³¼ö:");
+	printf("í–‰ ê°œìˆ˜:");
 	scanf("%d", &a);
-	printf("¿­ °³¼ö:");
+	printf("ì—´ ê°œìˆ˜:");
 	scanf("%d", &b);
-	printf("Ã¹ ¹øÂ° Çà·Ä ÀÔ·Â=\n");
+	printf("ì²« ë²ˆì§¸ í–‰ë ¬ ìž…ë ¥=\n");
 	for (i = 0; i < a; i++) {
 		for (j = 0; j < b; j++) {
 			scanf("%d", &c[i][j]);
 		}
 	}
-	printf("µÎ ¹øÂ° Çà·Ä ÀÔ·Â=\n");
+	printf("ë‘ ë²ˆì§¸ í–‰ë ¬ ìž…ë ¥=\n");
 	for (i = 0; i < a; i++) {
 		for (j = 0; j < b; j++) {
 			scanf("%d", &c2[i][j]);
@@ -28,7 +28,7 @@ int main() {
 			}
 		}
 	}
-	printf("µÎ ÇàÀÇ °ö\n");
+	printf("ë‘ í–‰ì˜ ê³±\n");
 	for (i = 0; i < a; i++) {
 		for (j = 0; j < b; j++) {
 			printf("%d ", result[i][j]);
