@@ -1,26 +1,39 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <stdlib.h>
-#include <windows.h>
 int main() {
-	int hour, min, sec;
-	hour = min = sec = 0;
-	while (1) {
-		system("cls");
-		printf("%02d: %02d: %02d", hour, min, sec);
-		sec++;
-		if (sec == 60) {
-			min++; 
-			sec = 0;
+	int a, b, i, j, result[10][10];
+	int c[10][10];
+	int c2[10][10];
+	printf("행 개수:");
+	scanf("%d", &a);
+	printf("열 개수:");
+	scanf("%d", &b);
+	printf("첫 번째 행렬 입력=\n");
+	for (i = 0; i < a; i++) {
+		for (j = 0; j < b; j++) {
+			scanf("%d", &c[i][j]);
 		}
-		if (min == 60) {
-			hour++;
-			min = 0;
+	}
+	printf("두 번째 행렬 입력=\n");
+	for (i = 0; i < a; i++) {
+		for (j = 0; j < b; j++) {
+			scanf("%d", &c2[i][j]);
 		}
-		if (hour == 24) {
-			hour = min = sec = 0;
+	}
+	for (i = 0; i < a; i++) {
+		for (j = 0; j < b; j++) {
+			result[i][j] = 0;
+			for (int k = 0; k < b; k++) {
+				result[i][j] += c[i][k] * c2[k][j];
+			}
 		}
-		Sleep(1000);
+	}
+	printf("두 행의 곱\n");
+	for (i = 0; i < a; i++) {
+		for (j = 0; j < b; j++) {
+			printf("%d ", result[i][j]);
+		}
+		printf("\n");
 	}
 	return 0;
 }
